@@ -95,7 +95,6 @@
               <value>10</value>
             </property>
           </properties>
-        <outputDirectory>${project.basedir}</outputDirectory>
         <reportsDirectory>${project.basedir}</reportsDirectory>
         </configuration>
 

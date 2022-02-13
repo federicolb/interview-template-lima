@@ -8,11 +8,11 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		        features ="src/test/java/features",
-		        glue = "tests",
-		        plugin = {},
+		        features ="src/test/resources",
+		        glue = "step_definitions",
+		        plugin = {"pretty", "json:target/report.json"},
 		        monochrome = true
-                )
+)
 
 public class testrunner {
    
