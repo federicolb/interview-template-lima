@@ -12,11 +12,12 @@ public class Config {
 
     public static WebDriver getDriver() {
         String OS = System.getProperty("os.name");
+        System.out.println(OS);
         switch (OS) {
             case "Linux":
-                System.setProperty("webdriver.chrome.driver", LINUX_DRIVER);
+                System.setProperty("webdriver.chrome.driver", LINUX_DRIVER); 
                 break;
-            case "Windows":
+            case "Windows 10": case "Windows 11":
                 System.setProperty("webdriver.chrome.driver", WINDOWS_DRIVER);
                 break;
         }

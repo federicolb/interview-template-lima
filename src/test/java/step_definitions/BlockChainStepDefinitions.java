@@ -1,21 +1,19 @@
 package step_definitions;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
 import config.Config;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.json.JSONObject;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import page_objects.BlockPage;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BlockChainStepDefinitions {
     private WebDriver driver;
@@ -54,8 +52,7 @@ public class BlockChainStepDefinitions {
 
     @Then("I should be able to follow the chain up to the initial block")
     public void iShouldBeAbleToFollowTheChainUpToTheInitialBlock() {
-        for (JSONObject block:
-             blocksInformation) {
+        for (JSONObject block : blocksInformation) {
 
             String block_number = blockPage.getBlockFieldValue(block, "height");
             String error_message = String.format("The prev_block for block number %s", block_number);

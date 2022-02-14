@@ -1,3 +1,5 @@
 /target
 /.idea
 *.iml
+/runner.testrunner.txt
+/TEST-runner.testrunner.xml
